@@ -1,0 +1,64 @@
+div {
+    animation: mycube 2s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    /* 0% */
+    to {
+        left: 200px;
+    }
+    /* 100% */
+}
+
+@keyframes mycube {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 200px;
+        top: 0;
+    }
+    50% {
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        left: 0px;
+        top: 200;
+    }
+    100% {
+        left: 0px;
+        top: 200px;
+    }
+}
+
+#bounce-title {
+    animation: bounce 1s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0%;
+        transform: scaleY(0.5);
+    }
+}
